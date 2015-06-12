@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="HitAndBlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6if-QQ-PMI">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="widthClass=compact" ambiguous="YES" misplaced="YES">
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <rect key="frame" x="107" y="375" width="105" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="buM-JQ-g7Z" kind="show" id="w2C-Kb-ePc"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sozai2.png" translatesAutoresizingMaskIntoConstraints="NO" id="HUx-gg-Xiv">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Ek6-nz-LBh"/>
+                                    <constraint firstAttribute="height" constant="250" id="eZe-kE-ocP"/>
+                                    <constraint firstAttribute="height" constant="50" id="yeB-HO-FYE"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ek6-nz-LBh"/>
+                                        <exclude reference="eZe-kE-ocP"/>
+                                        <exclude reference="yeB-HO-FYE"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="10" y="120" width="300" height="50"/>
+                                    <mask key="constraints">
+                                        <include reference="Ek6-nz-LBh"/>
+                                        <exclude reference="eZe-kE-ocP"/>
+                                        <include reference="yeB-HO-FYE"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="HUx-gg-Xiv" secondAttribute="centerX" id="DOO-fg-4ug"/>
+                            <constraint firstAttribute="centerX" secondItem="6if-QQ-PMI" secondAttribute="centerX" id="HhE-Er-ONF"/>
+                            <constraint firstAttribute="centerY" secondItem="HUx-gg-Xiv" secondAttribute="centerY" constant="10" id="kQr-O7-qSR"/>
+                            <constraint firstAttribute="centerY" relation="greaterThanOrEqual" secondItem="6if-QQ-PMI" secondAttribute="bottom" constant="200" id="nC3-1m-lzo">
+                                <variation key="widthClass=compact" constant="-165"/>
+                            </constraint>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="6if-QQ-PMI"/>
+                                <exclude reference="HUx-gg-Xiv"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="HhE-Er-ONF"/>
+                                <exclude reference="nC3-1m-lzo"/>
+                                <exclude reference="DOO-fg-4ug"/>
+                                <exclude reference="kQr-O7-qSR"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="6if-QQ-PMI"/>
+                                <include reference="HUx-gg-Xiv"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="HhE-Er-ONF"/>
+                                <include reference="nC3-1m-lzo"/>
+                                <include reference="DOO-fg-4ug"/>
+                                <include reference="kQr-O7-qSR"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="startBtn" destination="6if-QQ-PMI" id="6JT-10-099"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Game View Controller-->
+        <scene sceneID="ff0-zF-rgh">
+            <objects>
+                <viewController id="buM-JQ-g7Z" customClass="GameViewController" customModule="HitAndBlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZjH-D1-pVX"/>
+                        <viewControllerLayoutGuide type="bottom" id="BEC-tw-Yuu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wrf-x8-qc5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5he-aj-tnS"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PUG-ru-j16" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1000.5" y="276"/>
+        </scene>
+        <!--Mess View Controller-->
+        <scene sceneID="L3n-OX-sl7">
+            <objects>
+                <viewController id="UIL-7U-eOf" customClass="MessViewController" customModule="HitAndBlow" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="HrN-BW-sv0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FjP-sm-Kl4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PHN-yT-8kg">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="czF-ny-3yC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1536" y="276"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="sozai2.png" width="400" height="55"/>
+    </resources>
+</document>
